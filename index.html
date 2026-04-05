@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUENDEFUNK - SYSTEM_CCTV</title>
+    <!-- Fonts: Monospace for terminal feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- CRT Screen Overlays -->
+    <div class="crt-scanlines"></div>
+    <div class="crt-flicker"></div>
+    <div class="crt-vignette"></div>
+
+    <!-- Main Grid -->
+    <main class="cctv-master-grid">
+        
+        <!-- CAM 01: SUBJECT / HERO -->
+        <article class="cam-feed">
+            <header class="cam-header">
+                <div>REC &bull; CAM_01</div>
+                <div class="live-clock">--:--:--</div>
+            </header>
+            <div class="cam-content visual-feed">
+                <img src="https://raw.githubusercontent.com/DuendeFunk/Links/main/pruebafondo.png" class="bg-distortion" alt="bg">
+                <img src="https://raw.githubusercontent.com/DuendeFunk/Links/main/duendefunk.png" class="subject-img" alt="DUENDEFUNK">
+                <div class="target-box"></div>
+                <div class="cam-overlay-text">
+                    <h1>DUENDEFUNK</h1>
+                    <h2>SUBJECT_UNCONTAINED</h2>
+                </div>
+            </div>
+            <footer class="cam-footer">LOC: ALBA_DISTRICT // STATUS: ACTIVE</footer>
+        </article>
+
+        <!-- CAM 02: THE TAPE (VIDEO) -->
+        <article class="cam-feed">
+            <header class="cam-header">
+                <div>REC &bull; CAM_02_VISUALS</div>
+                <div class="live-clock">--:--:--</div>
+            </header>
+            <div class="cam-content video-feed">
+                <!-- Wrapper to force aspect fit within grid -->
+                <div class="iframe-wrapper">
+                    <iframe src="https://www.youtube.com/embed/G66_1v7-S6s?enablejsapi=1&autoplay=1&mute=1&controls=0&modestbranding=1&rel=0" title="Luz del Alba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <footer class="cam-footer">EVIDENCE_01: LUZ DEL ALBA</footer>
+        </article>
+
+        <!-- CAM 03: DATABASE (LINKS) -->
+        <article class="cam-feed">
+            <header class="cam-header">
+                <div>SYS &bull; DATABANK_03</div>
+                <div class="live-clock">--:--:--</div>
+            </header>
+            <div class="cam-content terminal-feed">
+                <p>> INITIATING SYNCHRONIZATION...</p>
+                <p>> ACCESSING EXTERNAL NODES:</p>
+                <nav class="matrix-links">
+                    <a href="https://www.youtube.com/@DUENDEFUNK-11-11" target="_blank" data-label="YOUTUBE">
+                        <i class="fa-brands fa-youtube"></i> NODE_YT: @DUENDEFUNK-11-11
+                    </a>
+                    <a href="https://www.tiktok.com/@duendefunk11" target="_blank" data-label="TIKTOK">
+                        <i class="fa-brands fa-tiktok"></i> NODE_TK: @duendefunk11
+                    </a>
+                    <a href="https://www.instagram.com/duendefunk/" target="_blank" data-label="INSTAGRAM">
+                        <i class="fa-brands fa-instagram"></i> NODE_IG: @duendefunk
+                    </a>
+                </nav>
+                <p class="blink-cursor">> _</p>
+            </div>
+            <footer class="cam-footer">NETWORK COMPROMISED / OPEN ROUTES</footer>
+        </article>
+
+        <!-- CAM 04: WIRE TRANSFER (TIP JAR) -->
+        <article class="cam-feed">
+            <header class="cam-header">
+                <div>SYS &bull; TERMINAL_04</div>
+                <div class="live-clock">--:--:--</div>
+            </header>
+            <div class="cam-content finance-feed">
+                <div class="wire-box" id="tip-btn">
+                    <i class="fa-solid fa-building-columns icon-massive"></i>
+                    <h3>>> INITIATE WIRE TRANSFER</h3>
+                    <p>TARGET ALIAS:</p>
+                    <div class="alias-display" id="alias-text">repartobuenaonda</div>
+                    <button class="sys-btn">CLICK_TO_CLONE_DATA</button>
+                </div>
+            </div>
+            <footer class="cam-footer">
+                DEV_SIGNATURE: <a href="https://www.juanmartinbarrientos.com" target="_blank">J. MARTIN</a>
+            </footer>
+        </article>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
