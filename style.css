@@ -192,8 +192,9 @@ a {
 
 .iframe-wrapper iframe {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%; 
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 110%; height: 110%; /* Crop out UI */
     filter: contrast(1.5) grayscale(100%) brightness(0.7) sepia(1) hue-rotate(-50deg) saturate(3);
     /* Creates a harsh red hue filter over the video */
     pointer-events: auto;
@@ -337,4 +338,16 @@ a {
     body { overflow-y: auto; }
     .cam-feed { min-height: 50vh; }
     .cam-overlay-text h1 { font-size: 2rem;}
+    
+    /* FIX FOR MOBILE: Ensure video shows un-cropped and doesn't collapse */
+    .cam-content.video-feed, .iframe-wrapper {
+        min-height: 250px; 
+    }
+    .iframe-wrapper iframe {
+        top: 0; left: 0;
+        transform: none;
+        width: 100%; height: 100%;
+        /* Let the real youtube thumbnail and UI be visible cleanly in mobile */
+        filter: grayscale(80%) sepia(0.5);
+    }
 }
